@@ -1,0 +1,4 @@
+# Packages with legacy build scripts that need the runtime setuptools package.
+natten==0.14.6
+clip @ git+https://github.com/openai/CLIP.git@a1d071733d7111c9c014f024669f959182114e33
+fastsam @ git+https://github.com/CASIA-IVA-Lab/FastSAM.git@4d153e909f0ad9c8ecd7632566e5a24e21cf0071

@@ -1,0 +1,63 @@
+name: hickory
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - cuda-toolkit=12.1
+  - numpy=1.26
+  - scipy
+  - scikit-image
+  - scikit-learn
+  - matplotlib
+  - pyyaml
+  - pillow
+  - tqdm
+  - pip:
+      - setuptools<80
+      - wheel
+      - --extra-index-url https://download.pytorch.org/whl/cu121
+      - torch==2.5.1+cu121
+      - torchvision==0.20.1+cu121
+      - torchaudio==2.5.1+cu121
+      - opencv-python==4.9.0.80
+      - open3d==0.18.0
+      - trimesh==4.11.0
+      - pyvista
+      - mesh2sdf
+      - evo
+      - rosbags
+      - rosbags-image
+      - gtsam
+      - robotdatapy
+      - yolov7-package==0.0.13
+      - imageio
+      - plotly
+      - pyrender
+      - pyglet==2.1.12
+      - rtree
+      - xatlas
+      - fvcore
+      - hydra-core
+      - omegaconf
+      - einops
+      - timm
+      - transformers==4.39.3
+      - ultralytics==8.0.120
+      - shapely
+      - geomloss
+      - loguru
+      - pycolmap
+      - pycocotools
+      - pandas
+      - seaborn
+      - ftfy
+      - regex
+      - requests
+      - wget
+      - gradio==3.35.2
+      - natsort
+      - pyquaternion
+      - -e .
+      - -r third_party/mps/requirements.txt
