@@ -148,7 +148,9 @@ docker compose run --rm hickory python main.py \
   --output-dir reconstruction/REPLICA/apt_0_1_test
 
 # For ROS bag datasets, e.g. NUS-CLB:
-docker compose run --rm hickory python main.py params/b2_zed.yaml
+docker compose run --rm hickory python main.py params/b2_zed.yaml \
+  --param params/NUS-CLB/ \
+  --output-dir reconstruction/NUS/CLB_1
 ```
 
 ### Hierarchical Representation Visualization:
