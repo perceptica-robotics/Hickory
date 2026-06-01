@@ -153,6 +153,33 @@ docker compose run --rm hickory python main.py params/b2_zed.yaml \
   --output-dir reconstruction/NUS/CLB_1
 ```
 
+The reconstruction output is written under the requested `--output-dir`. In
+each object output folder, Hickory saves files for the hierarchical object
+representation:
+
+```text
+# 1. Raw perception layer
+view.png                            # best representative RGB view
+mask.png                            # selected object mask for the best view
+depth.png                           # selected depth image for the best view
+camera_pose.txt                     # camera pose for the selected best view
+point_cloud_world.ply               # selected object point cloud
+point_cloud_world.npy               # selected object point cloud as NumPy data
+point_cloud_accumulated_world.ply   # accumulated object point cloud
+point_cloud_accumulated_world.npy   # accumulated object point cloud as NumPy data
+
+# 2. 3D mesh layer
+obj_mesh.glb                        # reconstructed object mesh
+pose_sam3d.txt                      # object pose from SAM3D
+pose_foundation.txt                 # object pose from FoundationPose (default)
+
+# 3. SQ layer
+obj_sq_params.npy                   # fitted superquadric parameters
+
+# 4. Inflated SQ layer
+obj_sq_params_expanded.npy          # expanded superquadric parameters
+```
+
 ### Hierarchical Representation Visualization:
 
 ```bash
