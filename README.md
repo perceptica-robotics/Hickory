@@ -163,10 +163,7 @@ view.png                            # best representative RGB view
 mask.png                            # selected object mask for the best view
 depth.png                           # selected depth image for the best view
 camera_pose.txt                     # camera pose for the selected best view
-point_cloud_world.ply               # selected object point cloud
-point_cloud_world.npy               # selected object point cloud as NumPy data
-point_cloud_accumulated_world.ply   # accumulated object point cloud
-point_cloud_accumulated_world.npy   # accumulated object point cloud as NumPy data
+point_cloud_world.ply/npy           # object point cloud from the best view
 
 # 2. 3D mesh layer
 obj_mesh.glb                        # reconstructed object mesh
